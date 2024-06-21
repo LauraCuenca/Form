@@ -1,3 +1,5 @@
+/* Estilos generales para ambos modos */
+
 body {
     font-family: Arial, sans-serif;
     background: url('library.jpg') no-repeat center center fixed;
@@ -45,7 +47,8 @@ input, select {
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button#toggle-dark-mode {
     width: auto;
     background-color: #4CAF50;
     color: white;
@@ -55,6 +58,25 @@ input[type="submit"] {
     margin-top: 20px;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button#toggle-dark-mode:hover {
     background-color: #45a049;
+}
+
+/* Estilos para el modo oscuro */
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container.dark-mode {
+    background-color: #222 !important;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode input:hover,
+.dark-mode button#toggle-dark-mode:hover {
+    background-color: #0f1010;
 }
